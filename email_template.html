@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .email-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #5b5b5b;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h2>Hi ${name},</h2>
+        <p>We are excited to offer you our latest product: <strong>${product}</strong>.</p>
+        <p>Click below to learn more:</p>
+        <a href="http://the-product-link.com" class="button">Learn More</a>
+        <p>Best Regards,<br>Your Custom Email Service Team</p>
+    </div>
+</body>
+</html>
