@@ -1,7 +1,7 @@
 from flask_socketio import SocketIO
 from flask import Flask
 from datetime import datetime
-import random  # Simulate statuses for now
+import random
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -12,8 +12,8 @@ email_logs = []
 def send_email(to_email, subject, body):
     global email_logs
     try:
-        # Simulate sending email
-        status = random.choice(['Delivered', 'Opened', 'Failed'])  # Replace with real SMTP integration later
+        # Simulating sending email
+        status = random.choice(['Delivered', 'Opened', 'Failed'])
         email_logs.append({'to_email': to_email, 'subject': subject, 'status': status, 'timestamp': str(datetime.now())})
         socketio.emit('update_status', {'email': to_email, 'status': status}, broadcast=True)
     except Exception as e:
