@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 
-// Function to replace placeholders in the email template
+// To replace placeholders in the email template
 function replacePlaceholders(template, data) {
     for (const key in data) {
-        const placeholder = `{${key}}`;  // Placeholder format {Company Name}
-        const value = data[key];  // Corresponding value from the CSV
-
-        // Replace all occurrences of the placeholder with actual value
+        const placeholder = `{${key}}`;
+        const value = data[key];
         template = template.replace(new RegExp(placeholder, 'g'), value);
     }
     return template;
