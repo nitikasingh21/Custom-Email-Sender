@@ -5,7 +5,7 @@ import time
 
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")  # Ensure eventlet is used
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
 @app.route("/send_email", methods=["POST"])
 def send_email():
@@ -14,7 +14,7 @@ def send_email():
     subject = data.get("subject")
     body = data.get("body")
 
-    # Simulate email sending
+    # Simulating email sending
     socketio.emit("status_update", {"email": email, "status": "Sending email..."})
     time.sleep(2)  # Simulating delay
     socketio.emit("status_update", {"email": email, "status": "Email delivered"})
