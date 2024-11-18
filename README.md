@@ -22,3 +22,18 @@ Follow these steps to set up the project on your local machine.
 ```bash
 git clone https://github.com/yourusername/custom-email-sender.git
 cd custom-email-sender
+```
+### 2. Set up the backend
+- Navigate to the backend folder and install the required Python dependencies using pip:
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+- In the backend folder, create a .env file.
+
+  ```bash
+EMAIL_API_KEY=your_email_api_key_here
+EMAIL_ID=your_email_address_here
+EMAIL_PASSWORD=your_email_password_here
+```
