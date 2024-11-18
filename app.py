@@ -8,14 +8,14 @@ import time
 
 app = Flask(__name__)
 
-# Store email connection details
+# To store email connection details
 connected_email = None
 connected_password = None
 
 # Global list to store email logs
 email_logs = []
 
-# Initialize scheduler
+# Scheduler Initialization
 scheduler = BackgroundScheduler()
 scheduler.start()
 
